@@ -1,0 +1,22 @@
+/*Lineas rectificadoras de rem*/
+
+html {
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+body {
+    font-size: 16px;
+}
+
+
+/*Fin de lineas rectificadoras de rem*/
+
+h1 {
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+span {
+    font-size: 2rem;
+}
