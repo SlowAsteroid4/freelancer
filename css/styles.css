@@ -1,3 +1,15 @@
+:root {
+    /*Paleta de colores*/
+    --blanco: #FFFFFF;
+    --obscuro: #000000;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    /*Medidas*/
+    --fuente_principal: 3.8rem;
+}
+
+
 /*Lineas rectificadoras de rem*/
 
 html {
@@ -7,16 +19,19 @@ html {
 
 body {
     font-size: 16px;
+    font-family: 'Krub', sans-serif;
 }
 
 
 /*Fin de lineas rectificadoras de rem*/
 
-h1 {
+.titulo {
     text-align: center;
-    font-size: 3.8rem;
+    font-size: var(--fuente_principal);
+    color: var(--primario);
+    font-weight: normal;
 }
 
-span {
+.titulo span {
     font-size: 2rem;
 }
