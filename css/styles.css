@@ -1,21 +1,20 @@
+/* Constantes */
+
 :root {
     /*Paleta de colores*/
-    --blanco: #FFFFFF;
+    --blanco: #ffffff;
     --obscuro: #000000;
-    --primario: #FFC107;
-    --secundario: #0097A7;
+    --primario: #ffc107;
+    --secundario: #0097a7;
     --gris: #757575;
+    --grisclaro: #DFE9F3;
     /*Medidas*/
     --fuente_principal: 3.8rem;
 }
 
-
-/*Lineas rectificadoras de rem*/
-
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    /*1rem = 10px*/
 }
 
 *,
@@ -26,7 +25,8 @@ html {
 
 body {
     font-size: 16px;
-    font-family: 'Krub', sans-serif;
+    font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
 }
 
 h1 {
@@ -128,7 +128,7 @@ h3 {
     margin-top: 1rem;
     text-transform: uppercase;
     font-weight: bold;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     width: 90%;
     text-align: center;
 }
@@ -137,4 +137,50 @@ h3 {
     .btn {
         width: auto;
     }
+}
+
+
+/* De aqui en adelante es el contenido principal */
+
+.sombra {
+    -webkit-box-shadow: -5px 7px 20px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -5px 7px 20px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: -5px 7px 20px -4px rgba(0, 0, 0, 0.75);
+    background-color: var(--blanco);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
