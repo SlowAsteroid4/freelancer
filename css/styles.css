@@ -1,3 +1,7 @@
+/*Esta es la hoja de estilos, en esta se puden hacer 
+todas las caracteristicas visuales de nuestra pagina*/
+
+
 /* Constantes */
 
 :root {
@@ -12,14 +16,18 @@
     --fuente_principal: 3.8rem;
 }
 
+
+/* En este apartado se pueden hacer unos ajustes a todo el documento HTML */
+
 html {
+    /*Este se supone que es para normalizar el rem*/
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
 }
 
 
-/* Scroll snap */
+/* Scroll snap: Es la animacion que se tiene al mover el scroll un poco y que solo te lleve a la seccion*/
 
 .navegacion-principal,
 .servicios,
@@ -28,17 +36,26 @@ html {
     scroll-snap-stop: always;
 }
 
+
+/*No tengo idea, tendre que investigar*/
+
 *,
 *:before,
 *:after {
     box-sizing: inherit;
 }
 
+
+/* Aqui se dan reglas a todo el contenido de nuestro sitio */
+
 body {
     font-size: 16px;
     font-family: "Krub", sans-serif;
     background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
 }
+
+
+/* Aqui podemos ser generales y darle reglas a cada uno de nuestros encabezados */
 
 h1 {
     font-size: var(--fuente_principal);
@@ -72,6 +89,7 @@ h3 {
 
 .contenedor {
     max-width: 120rem;
+    /* El margen es lo que hay de la caja que guarda el contenido hacia afuera */
     margin: 0 auto;
 }
 
@@ -80,10 +98,14 @@ h3 {
 }
 
 .navegacion-principal {
+    /* El display flex es ese tipo de coordenadas o de mapa para poder acomodar los objetos, esta este, y esta el grid */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
+/* Los media querie son para los sitios responsive */
 
 @media (min-width: 768px) {
     .navegacion-principal {
@@ -93,6 +115,7 @@ h3 {
 }
 
 .navegacion-principal a {
+    /* El padding es lo que hay de la caja para adentro, hace bordes y separa el contenido de la caja */
     padding: 1rem;
     color: var(--blanco);
     text-decoration: none;
